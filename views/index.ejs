@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- style -->
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <!-- icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="javascripts/simple.js" defer></script>
+  <title>PIAZZA</title>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <input type="checkbox" id="cart">
+  <label for="cart" class="labelCart"><span class="fa fa-shopping-basket"></span></label>
+
+  <h3 class="logo">PIAZZA ITALIANA</h3>
+
+  <!-- SIDEBAR -->
+  <div class="sideBar">
+    <div class="sideBarMenu">
+      <span class="fa fa-home"></span>
+      <a href="">Home</a>
+    </div>
+    <div class="sideBarMenu">
+      <span class="fa fa-moon"></span>
+      <a href="">Dark Mode</a>
+    </div>
+  </div>
+  <!-- MAIN -->
+  <div class="mainPanel">
+    <div class="mainPanelBanner">
+      <img src="images/image20.jpg" alt="PromoImage">
+      <div class="bannerPromo">
+        <h1><span>15% OFF</span><br>
+          747 <br> Promo Code</h1>
+      </div>
+    </div>
+    <h3 class="mainPanelTitle">Recommended For You</h3>
+    <div class="mainPanelMenu">
+      <a href="">All</a>
+      <a href="">&lt £25</a>
+    </div>
+
+    <div class="mainPanelContent">
+      <div class="mainPanelCard" data-id="01">
+        <img class="cardImage" src="images/image1.jpg" alt="">
+        <div class="cardText">
+          <h4 class="itemTitle">SPAGHETTI ALLE VONGOLE VERACI</h4><span class="itemPrice">26 $</span>
+          <p>Spaghetti with fresh clams, garlic, chilli flakes, white wine sauce</p>
+          <p class="cardTime"><span class="fa fa-clock"> </span>10 min <button id="infoButton" data-cart
+              class="fa fa-shopping-basket"></button></p>
+        </div>
+      </div>
+      <div class="mainPanelCard" data-id="02">
+        <img class="cardImage" src="images/image2.jpg" alt="">
+        <div class="cardText">
+          <h4 class="itemTitle">OSSOBUCO DI VITELLO BRASATO </h4><span class="itemPrice">30 $</span>
+          <p>Braised cross-cut veal shanks, mixed vegetable
+            stew</p>
+          <p class="cardTime"><span class="fa fa-clock"> </span>15 min <button id="infoButton" data-cart
+              class="fa fa-shopping-basket"></button></p>
+        </div>
+      </div>
+      <div class="mainPanelCard" data-id="03">
+        <img class="cardImage" src="images/image4.jpg" alt="">
+        <div class="cardText">
+          <h4 class="itemTitle">RISOTTO AL TARTUFO</h4><span class="itemPrice">24 $</span>
+          <p>Truffle butter risotto, fresh black truffle, slow-cooked egg yolk, parmesan</p>
+          <p class="cardTime"><span class="fa fa-clock"> </span>30 min <button id="infoButton" data-cart
+              class="fa fa-shopping-basket"></button></p>
+        </div>
+      </div>
+      <div class="mainPanelCard" data-id="04">
+        <img class="cardImage" src="images/image6.jpg" alt="">
+        <div class="cardText">
+          <h4 class="itemTitle">CARPACCIO DI MANZO</h4><span class="itemPrice">16 $</span>
+          <p>Beef carpaccio, anchovy-pecorino aioli, rocket,
+            parmesan, olive oil</p>
+          <p class="cardTime"><span class="fa fa-clock"> </span>20 min<button id="infoButton" data-cart
+              class="fa fa-shopping-basket"></button></p>
+        </div>
+      </div>
+      <div class="mainPanelCard" data-id="05">
+        <img class="cardImage" src="images/image11.jpg" alt="">
+        <div class="cardText">
+          <h4 class="itemTitle">RISOTTO AL POMODORO E GRANCHIO</h4><span class="itemPrice">29 $</span>
+          <p>Tomato-crab risotto, assorted seafood, parmesan</p>
+          <p class="cardTime"><span class="fa fa-clock"> </span>10 min<button id="infoButton" data-cart
+              class="fa fa-shopping-basket"></button></p>
+        </div>
+      </div>
+      <div class="mainPanelCard" data-id="06">
+        <img class="cardImage" src="images/image13.jpg" alt="">
+        <div class="cardText">
+          <h4 class="itemTitle">BISTECCA DI AGNELLO</h4><span class="itemPrice">28 $</span>
+          <p>Lamb leg steak 300g, peppercorn sauce</p>
+          <p class="cardTime"><span class="fa fa-clock"> </span>14 min <button id="infoButton" data-cart
+              class="fa fa-shopping-basket"></button></p>
+        </div>
+      </div>
+      <div class="mainPanelCard" data-id="07">
+        <img class="cardImage" src="images/image17.jpg" alt="">
+        <div class="cardText">
+          <h4 class="itemTitle">SPAGHETTI POMODORO</h4><span class="itemPrice">19 $</span>
+          <p>Spaghetti, tomato sauce, cherry tomatoes,basil, parmesan
+            *add chili flakes for spiciness</p>
+          <p class="cardTime"><span class="fa fa-clock"> </span>18 min <button id="infoButton" data-cart
+              class="fa fa-shopping-basket"></button></p>
+        </div>
+      </div>
+      <div class="mainPanelCard" data-id="08">
+        <img class="cardImage" src="images/image18.jpg" alt="">
+        <div class="cardText">
+          <h4 class="itemTitle">CALAMARI ALLA LIVORNESE</h4><span class="itemPrice">26 $</span>
+          <p>Tender squids, Livornese sauce, capers</p>
+          <p class="cardTime"><span class="fa fa-clock"> </span>10 min <button id="infoButton" data-cart
+              class="fa fa-shopping-basket"></button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- BASKET -->
+  <div id="basket" class="basketOrder">
+    <h3>Order Menu</h3>
+    <div class="orderAdress">
+      <p>Adress Delivery</p>
+      <h4>221 B Baker Street, London</h4>
+    </div>
+    <div class="orderTime">
+      <span class="fa fa-clock"></span> 30 min <span class="fa fa-map-marker-alt"> </span> 2 km
+    </div>
+    <div class="orderWrapper">
+    </div>
+    <hr class="divider">
+    <div class="orderTotal">
+      <p>SubTotal <span class="subTotal">0</span> <span class="currency">$</span></p>
+      <p>Tax(10%) <span class="subTax">0</span> <span class="currency">$</span></p>
+      <p>Delivery Fee <span class="delivery">0</span> <span class="currency">$</span></p>
+
+      <div class="orderPromo">
+        <input class="promoInput" type="text" placeholder="Apply Voucher">
+        <button class="promoButton">Find Promo</button>
+      </div>
+      <hr class="divider">
+      <p>Total <span class="totalPrice">0</span><span class="currency">$</span></p>
+    </div>
+    <button class="chekout">Chekout</button>
+
+    <hr class="divider">
+  </div>
+</body>
+
+</html>
