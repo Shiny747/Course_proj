@@ -76,18 +76,19 @@ function calcTotalPrice(){
  let tax = subPrice * 0.10;
  subPriceEl.innerText = subPrice;
  taxEl.innerText = parseInt(tax);
+ let promo = document.getElementById('promoInputId');
  let total = (subPrice + parseInt(tax)) + deliveryFee;
  totalEl.innerText = total;
  window.addEventListener('click', function(event){
     if(event.target.dataset.action === 'findPromo'){
-        if(promo == "747"){
-            totalEl.innerText = total/0.3;
+        if(promo.value == "747"){
+        totalEl.innerText = total - (parseInt(total*0.30));
         }
     }
 });
 })
 
-let promo = document.querySelector('.promoInput').value;
+
 
 
 
