@@ -81,6 +81,3 @@ function calcTotalPrice(){
 })
 
 }
-
-//вывод цены
-

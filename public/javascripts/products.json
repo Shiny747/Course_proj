@@ -4,55 +4,63 @@
         "title": "SPAGHETTI ALLE VONGOLE VERACI",
         "price": 26 ,
         "imgSrc": "images/image1.jpg",
-        "description": "Spaghetti with fresh clams, garlic, chilli flakes, white wine sauce"
+        "description": "Spaghetti with fresh clams, garlic, chilli flakes, white wine sauce",
+        "deliveryTime": 10
     },
     {
         "id": 2,
         "title": "OSSOBUCO DI VITELLO BRASATO",
         "price": 30 ,
         "imgSrc": "images/image2.jpg",
-        "description": "Braised cross-cut veal shanks, mixed vegetable stew"
+        "description": "Braised cross-cut veal shanks, mixed vegetable stew",
+        "deliveryTime": 15
     },
     {
         "id": 3,
         "title": "RISOTTO AL TARTUFO",
         "price": 24 ,
         "imgSrc": "images/image4.jpg",
-        "description": "Truffle butter risotto, fresh black truffle, slow-cooked egg yolk, parmesan"
+        "description": "Truffle butter risotto, fresh black truffle, slow-cooked egg yolk, parmesan",
+        "deliveryTime": 30
     },
     {
         "id": 4,
         "title": "CARPACCIO DI MANZO",
         "price": 16 ,
         "imgSrc": "images/image6.jpg",
-        "description": "Beef carpaccio, anchovy-pecorino aioli, rocket, parmesan, olive oil"
+        "description": "Beef carpaccio, anchovy-pecorino aioli, rocket, parmesan, olive oil",
+        "deliveryTime": 20
     },
     {
         "id": 5,
         "title": "RISOTTO AL POMODORO E GRANCHIO",
         "price": 28 ,
         "imgSrc": "images/image11.jpg",
-        "description": "Tomato-crab risotto, assorted seafood, parmesan"
+        "description": "Tomato-crab risotto, assorted seafood, parmesan",
+        "deliveryTime": 10
     },
     {
         "id": 6,
         "title": "BISTECCA DI AGNELLO",
         "price": 29 ,
         "imgSrc": "images/image13.jpg",
-        "description": "Lamb leg steak 300g, peppercorn sauce"
+        "description": "Lamb leg steak 300g, peppercorn sauce",
+        "deliveryTime": 14
     },
     {
         "id": 7,
         "title": "SPAGHETTI POMODORO",
         "price": 19 ,
         "imgSrc": "images/image17.jpg",
-        "description": "Spaghetti, tomato sauce, cherry tomatoes,basil, parmesan *add chili flakes for spiciness"
+        "description": "Spaghetti, tomato sauce, cherry tomatoes,basil, parmesan *add chili flakes for spiciness",
+        "deliveryTime": 18
     },
     {
         "id": 8,
         "title": "CALAMARI ALLA LIVORNESE",
         "price": 26 ,
         "imgSrc": "images/image18.jpg",
-        "description": "Tender squids, Livornese sauce, capers"
+        "description": "Tender squids, Livornese sauce, capers",
+        "deliveryTime": 10
     }
 ]
