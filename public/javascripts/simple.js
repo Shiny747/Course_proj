@@ -15,6 +15,7 @@ window.addEventListener('click', function (event) {
         }
         if(event.target.hasAttribute('data-action') && event.target.closest('.orderWrapper')){
             calcTotalPrice();
+            updateStortage();
         }
     };
 });
@@ -35,6 +36,7 @@ window.addEventListener('click', function (event) {
         const counterEL = itemInOrder.querySelector('[data-counter]');
         counterEL.innerText = parseInt(counterEL.innerText) +1;
         calcTotalPrice();
+        updateStortage();
     } else{
         let cartItemHTML = `<div class="orderCard" data-id=${productInfo.id}>
         <img class="orderImage" src="${productInfo.imgSrc}" alt="">
@@ -49,6 +51,7 @@ window.addEventListener('click', function (event) {
         </div>`;
 orderWrapper.insertAdjacentHTML('beforeend',cartItemHTML);
 calcTotalPrice();
+updateStortage();
 }
     }
 });
@@ -57,11 +60,12 @@ window.addEventListener('click', function(event){
     if (event.target.dataset.action === 'delet') {
         event.target.closest('.orderCard').remove();
         calcTotalPrice();
+        updateStortage();
         }      
 })
 
 // подсчет суммы
-async function calcTotalPrice(){
+function calcTotalPrice(){
  let cardItems = document.querySelectorAll('.orderCard');
  let subPrice = 0;
  let subPriceEl = document.querySelector('.subTotal');
@@ -88,4 +92,27 @@ async function calcTotalPrice(){
 });
 })
 
+}
+
+const basketOrder = document.querySelector('.basketOrder');
+
+const initialStortage = async ()=>{
+    if ( localStorage.getItem('products') !== null){
+        console.log(basketOrder.querySelector('.orderWrapper').innerHTML)
+        basketOrder.querySelector('.orderWrapper').innerHTML = localStorage.setItem('products');
+        console.log(basketOrder.querySelector('.orderWrapper').innerHTML)
+    }
+
+}
+
+
+const updateStortage = ()=>{
+    let parent = basketOrder.querySelector('.orderWrapper');
+    let html = parent.innerHTML;
+    html = html.trim();
+    if(html.length){
+    localStorage.setItem('products',html);}
+    else{
+        localStorage.removeItem('products')
+    }
 }

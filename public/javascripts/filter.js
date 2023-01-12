@@ -1,18 +1,18 @@
 const list = document.querySelector('.mainPanelMenu'),
       items = document.querySelectorAll('.mainPanelCard');
 
-function filter(){
+ async function filter(){
     list.addEventListener('click', event => {
-        let targetid = event.target.dataset.f
-        console.log(targetid)
-        switch(targetid){
+        let targetId = event.target.dataset.f
+        console.log(targetId)
+        switch(targetId){
             case 'ALL':
                 break
             case 'RISOTTO':
-            getItems(targetid);
+            getItems(targetId);
                 break
             case 'SPAGHETTI':
-            getItems(targetid);
+            getItems(targetId);
             break     
         }
     })
@@ -21,10 +21,11 @@ function filter(){
 function getItems(className){
     items.forEach(item => {
         if(item.classList.contains(className)){
-            item.style.visibility = 'hidden'
+            item.style.display = 'block'
+            console.log("Error here!");
         } else {
-            item.style.visibility = 'visible'
+            item.style.display = 'none'
+            console.log("Error here2!");
         }
     })
 }
-filter();
