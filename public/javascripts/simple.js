@@ -45,7 +45,7 @@ window.addEventListener('click', function (event) {
         <div id="times" data-action="delet" class="fa fa-times"></div>
         </div>
         </div>
-        <h4 class="orderPrice">${productInfo.price}</h4>
+        <h4 class="orderPrice">${productInfo.price}$</h4>
         </div>`;
 orderWrapper.insertAdjacentHTML('beforeend',cartItemHTML);
 calcTotalPrice();
@@ -78,6 +78,17 @@ function calcTotalPrice(){
  taxEl.innerText = parseInt(tax);
  let total = (subPrice + parseInt(tax)) + deliveryFee;
  totalEl.innerText = total;
+ window.addEventListener('click', function(event){
+    if(event.target.dataset.action === 'findPromo'){
+        if(promo == "747"){
+            totalEl.innerText = total/0.3;
+        }
+    }
+});
 })
+
+let promo = document.querySelector('.promoInput').value;
+
+
 
 }
