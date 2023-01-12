@@ -71,7 +71,6 @@ function calcTotalPrice(){
  let subPriceEl = document.querySelector('.subTotal');
  let taxEl = document.querySelector('.subTax')
  let totalEl = document.querySelector('.totalPrice');
- let deliveryFee = 5;
  cardItems.forEach(function(item){
  let amountEl = item.querySelector('[data-counter]');
  let priceEl = item.querySelector('.orderPrice');
@@ -81,8 +80,8 @@ function calcTotalPrice(){
  subPriceEl.innerText = subPrice;
  taxEl.innerText = parseInt(tax);
  let promo = document.getElementById('promoInputId');
- let total = (subPrice + parseInt(tax)) + deliveryFee;
- totalEl.innerText = total;
+ let total = (subPrice + parseInt(tax)) + 5;
+ totalEl.innerText =  total;
  window.addEventListener('click', function(event){
     if(event.target.dataset.action === 'findPromo'){
         if(promo.value == "747"){
@@ -94,25 +93,33 @@ function calcTotalPrice(){
 
 }
 
+// Запись в localStorage и удаление по chekout
 const basketOrder = document.querySelector('.basketOrder');
 
-const initialStortage = async ()=>{
+const initialStortage = ()=>{
     if ( localStorage.getItem('products') !== null){
-        console.log(basketOrder.querySelector('.orderWrapper').innerHTML)
-        basketOrder.querySelector('.orderWrapper').innerHTML = localStorage.setItem('products');
-        console.log(basketOrder.querySelector('.orderWrapper').innerHTML)
+        basketOrder.querySelector('.orderWrapper').innerHTML = localStorage.getItem('products');
+                calcTotalPrice();
     }
-
 }
-
-
+initialStortage();
 const updateStortage = ()=>{
     let parent = basketOrder.querySelector('.orderWrapper');
     let html = parent.innerHTML;
     html = html.trim();
     if(html.length){
+        calcTotalPrice()
     localStorage.setItem('products',html);}
     else{
+        calcTotalPrice()
         localStorage.removeItem('products')
     }
 }
+window.addEventListener('click', function(event){
+    if (event.target.dataset.action === 'chekout') {
+        alert('Your order is being processed')
+        basketOrder.querySelector('.orderWrapper').innerHTML = " ";
+        calcTotalPrice();
+        localStorage.removeItem('products')
+        }      
+})
