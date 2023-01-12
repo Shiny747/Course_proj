@@ -12,6 +12,7 @@
   <script src="javascripts/products.json" defer></script>
   <script src="javascripts/render.js" defer></script>
   <script src="javascripts/simple.js" defer></script>
+  <script src="javascripts/filter.js" defer></script>
   <title>PIAZZA</title>
 </head>
 
@@ -38,14 +39,15 @@
     <div class="mainPanelBanner">
       <img src="images/image20.jpg" alt="PromoImage">
       <div class="bannerPromo">
-        <h1><span>15% OFF</span><br>
+        <h1><span>30% OFF</span><br>
           747 <br> Promo Code</h1>
       </div>
     </div>
     <h3 class="mainPanelTitle">Recommended For You</h3>
     <div class="mainPanelMenu">
-      <a href="">All</a>
-      <a href="">&lt £25</a>
+      <div data-f="ALL">ALL</div>
+      <div data-f="SPAGHETTI">SPAGHETTI</div>
+      <div data-f="RISOTTO">RISOTTO</div>
     </div>
     <div class="mainPanelContent" id="productsContainer">
     </div>
@@ -83,3 +85,11 @@
 </body>
 
 </html>
+
+
+<!-- 
+фильты по цене и товару
+поменять хэдер
+добавить асинк на обработчик цены
+сохранять данные локал 
+боковое меню скинуть вправо-->

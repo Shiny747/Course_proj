@@ -61,7 +61,7 @@ window.addEventListener('click', function(event){
 })
 
 // подсчет суммы
-function calcTotalPrice(){
+async function calcTotalPrice(){
  let cardItems = document.querySelectorAll('.orderCard');
  let subPrice = 0;
  let subPriceEl = document.querySelector('.subTotal');
@@ -83,13 +83,9 @@ function calcTotalPrice(){
     if(event.target.dataset.action === 'findPromo'){
         if(promo.value == "747"){
         totalEl.innerText = total - (parseInt(total*0.30));
-        }
+        }else{ totalEl.innerText = total;}
     }
 });
 })
-
-
-
-
 
 }

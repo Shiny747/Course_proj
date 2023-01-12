@@ -9,7 +9,7 @@ async function getProducts() {
 }
 function renderProducts(productsArray) {
     productsArray.forEach(function (item) {
-        const productHTML = `   <div class="mainPanelCard" data-id="0${item.id}">
+        const productHTML = `   <div class="mainPanelCard ${item.category}" data-id="0${item.id}">
                                 <img class="cardImage" src="${item.imgSrc}" alt="">
                                 <div class="cardText">
                                 <h4 class="itemTitle">${item.title}</h4><span class="itemPrice">${item.price}</span>$

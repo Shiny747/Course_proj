@@ -5,7 +5,8 @@
         "price": 26 ,
         "imgSrc": "images/image1.jpg",
         "description": "Spaghetti with fresh clams, garlic, chilli flakes, white wine sauce",
-        "deliveryTime": 10
+        "deliveryTime": 10,
+        "category": "SPAGHETTI"
     },
     {
         "id": 2,
@@ -13,7 +14,8 @@
         "price": 30 ,
         "imgSrc": "images/image2.jpg",
         "description": "Braised cross-cut veal shanks, mixed vegetable stew",
-        "deliveryTime": 15
+        "deliveryTime": 15,
+        "category":"OSSOBUCO"
     },
     {
         "id": 3,
@@ -21,7 +23,8 @@
         "price": 24 ,
         "imgSrc": "images/image4.jpg",
         "description": "Truffle butter risotto, fresh black truffle, slow-cooked egg yolk, parmesan",
-        "deliveryTime": 30
+        "deliveryTime": 30,
+        "category": "RISOTTO"
     },
     {
         "id": 4,
@@ -29,7 +32,8 @@
         "price": 16 ,
         "imgSrc": "images/image6.jpg",
         "description": "Beef carpaccio, anchovy-pecorino aioli, rocket, parmesan, olive oil",
-        "deliveryTime": 20
+        "deliveryTime": 20,
+        "category":"CARPACCIO"
     },
     {
         "id": 5,
@@ -37,7 +41,8 @@
         "price": 28 ,
         "imgSrc": "images/image11.jpg",
         "description": "Tomato-crab risotto, assorted seafood, parmesan",
-        "deliveryTime": 10
+        "deliveryTime": 10,
+        "category": "RISOTTO"
     },
     {
         "id": 6,
@@ -45,7 +50,8 @@
         "price": 29 ,
         "imgSrc": "images/image13.jpg",
         "description": "Lamb leg steak 300g, peppercorn sauce",
-        "deliveryTime": 14
+        "deliveryTime": 14,
+        "category": "BISTECCA"
     },
     {
         "id": 7,
@@ -53,7 +59,8 @@
         "price": 19 ,
         "imgSrc": "images/image17.jpg",
         "description": "Spaghetti, tomato sauce, cherry tomatoes,basil, parmesan *add chili flakes for spiciness",
-        "deliveryTime": 18
+        "deliveryTime": 18,
+        "category": "SPAGHETTI"
     },
     {
         "id": 8,
@@ -61,6 +68,7 @@
         "price": 26 ,
         "imgSrc": "images/image18.jpg",
         "description": "Tender squids, Livornese sauce, capers",
-        "deliveryTime": 10
+        "deliveryTime": 10,
+        "category": "CALAMARI"
     }
 ]
