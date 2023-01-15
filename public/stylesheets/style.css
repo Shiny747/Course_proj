@@ -176,7 +176,6 @@ color: var(--red);
   box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 4px;
   border-radius: 15px;
   position: relative; 
-  cursor: pointer;
 }
 .mainPanelCard:hover{
   box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 15px;
@@ -208,6 +207,7 @@ color: var(--red);
   border-radius: 10px;
   border: none;
   float: right;
+  cursor: pointer;
   }
 
 .basketOrder{

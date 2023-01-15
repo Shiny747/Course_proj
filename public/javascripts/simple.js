@@ -1,3 +1,5 @@
+'use strict'
+
 let orderWrapper = document.querySelector('.orderWrapper')
 // работа счетчика
 window.addEventListener('click', function (event) {
@@ -11,7 +13,10 @@ window.addEventListener('click', function (event) {
         if (event.target.dataset.action === 'minus') {
             if (parseInt(counter.innerText) > 1) {
                 counter.innerText = --counter.innerText
-            }  
+            } else if(event.target.closest('.orderWrapper') && parseInt(counter.innerText)===1){
+                event.target.closest('.orderCard').remove();
+                calcTotalPrice();
+            } 
         }
         if(event.target.hasAttribute('data-action') && event.target.closest('.orderWrapper')){
             calcTotalPrice();
@@ -67,7 +72,6 @@ window.addEventListener('click', function(event){
 // подсчет суммы
 function calcTotalPrice(){
  let cardItems = document.querySelectorAll('.orderCard');
- let subPrice = 0;
  let subPriceEl = document.querySelector('.subTotal');
  let taxEl = document.querySelector('.subTax')
  let totalEl = document.querySelector('.totalPrice');
@@ -75,14 +79,17 @@ function calcTotalPrice(){
  let amountEl = item.querySelector('[data-counter]');
  let priceEl = item.querySelector('.orderPrice');
  let currentPrice = parseInt(amountEl.innerText) * parseInt(priceEl.innerText);
- subPrice += currentPrice;
+ let subPrice =+ currentPrice;
  let tax = subPrice * 0.10;
  subPriceEl.innerText = subPrice;
  taxEl.innerText = Math.round(tax);
  let promo = document.getElementById('promoInputId');
  let total = (subPrice + parseInt(tax)) + 5;
- if(subPrice == 0 || currentPrice == 0){
-    totalEl = 0
+ const cardWrapper = document.querySelector('.orderWrapper');
+ if(cardWrapper.children.length == 0){
+     subPriceEl.innerText = 0;
+     totalEl.innerText = 0;
+     taxEl.innerText = 0;
  }else{ 
     totalEl.innerText =  total;
     window.addEventListener('click', function(event){
