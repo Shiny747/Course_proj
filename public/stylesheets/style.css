@@ -367,7 +367,7 @@ padding: 10px 0px;
 
 
 .popUp{
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -379,10 +379,6 @@ padding: 10px 0px;
   z-index: 5;
 }
 
-.popUp.active{
-  display: block;
-}
-
 .popUpContainter{
   display: flex;
   width: 100%;
@@ -390,7 +386,6 @@ padding: 10px 0px;
 }
 
 .popUpBody{
-  top: 100px;
   margin: auto;
   width: 400px;
   background-color: var(--mainColor);
