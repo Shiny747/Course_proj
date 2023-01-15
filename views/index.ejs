@@ -13,6 +13,7 @@
   <script src="javascripts/render.js" defer></script>
   <script src="javascripts/filter.js" defer></script>
   <script src="javascripts/simple.js" defer></script>
+  <script src="javascripts/popUp.js" defer></script>
   <title>PIAZZA</title>
 </head>
 
@@ -26,12 +27,10 @@
   <!-- SIDEBAR -->
   <div class="sideBar">
     <div class="sideBarMenu">
-      <span class="fa fa-home"></span>
-      <a href="">Home</a>
+      <a href="/"> <span class="fa fa-home"></span>Home</a>
     </div>
     <div class="sideBarMenu">
-      <span class="fa fa-moon"></span>
-      <a href="">Dark Mode</a>
+      <a id="openPopUp"><span class="fa fa-user-alt"></span>Login</a>
     </div>
   </div>
   <!-- MAIN -->
@@ -45,9 +44,9 @@
     </div>
     <h3 class="mainPanelTitle">Recommended For You</h3>
     <div class="mainPanelMenu">
-      <div data-f="ALL">ALL</div>
-      <div data-f="SPAGHETTI">SPAGHETTI</div>
-      <div data-f="RISOTTO">RISOTTO</div>
+      <div data-filter="ALL">ALL</div>
+      <div data-filter="SPAGHETTI">SPAGHETTI</div>
+      <div data-filter="RISOTTO">RISOTTO</div>
     </div>
     <div class="mainPanelContent" id="productsContainer">
     </div>
@@ -82,14 +81,21 @@
 
     <hr class="divider">
   </div>
+
+  <div class="popUp" id="popUp">
+    <div class="popUpContainer">
+      <div class="popUpBody" id="popUpBody">
+        <p>Registration</p>
+        <form action="/" method="post">
+          <input type="text" name="name" placeholder="Name"></input>
+          <input type="text" name="phone" placeholder="Tel"></input>
+          <button type="submit">Register</button>
+        </form>
+        <div class="popUpClose fa fa-times" id="closePopUp"></div>
+      </div>
+    </div>
+  </div>
+
 </body>
 
 </html>
-
-
-<!-- 
-фильты по цене и товару
-поменять хэдер
-добавить асинк на обработчик цены
-сохранять данные локал 
-боковое меню скинуть вправо-->

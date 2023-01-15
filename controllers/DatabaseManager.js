@@ -1,26 +1,17 @@
-class DatabaseManager
-{
-    static #datas = [];
-    static append(...vals)
-    {
-        for (const iterator of vals) {
-        DatabaseManager.#datas.push(iterator);   
-        }
-    }
-    static getAll()
-    {
-        return [...DatabaseManager.#datas];
-
-    }
-    static hasUser(userName, password)
-    {
-        for (const iterator of DatabaseManager.#datas) {
-            console.log(iterator, userName, password);
-            if(iterator.username == userName && iterator.password == password )
-            return true;
-        }
-        return false;
+let users = [];
+console.log(users);
+class User {
+    constructor(name, phone){
+        this.name = name;
+        this.phone = phone;
     }
 }
 
+class DatabaseManager {
+    static addUser(name, phone){
+        console.log('2');
+        users.push(new User(name, phone));
+        console.log('3');
+    }
+}
 module.exports = DatabaseManager;

@@ -59,7 +59,7 @@ updateStortage();
 window.addEventListener('click', function(event){
     if (event.target.dataset.action === 'delet') {
         event.target.closest('.orderCard').remove();
-        calcTotalPrice();
+                calcTotalPrice();
         updateStortage();
         }      
 })
@@ -78,17 +78,21 @@ function calcTotalPrice(){
  subPrice += currentPrice;
  let tax = subPrice * 0.10;
  subPriceEl.innerText = subPrice;
- taxEl.innerText = parseInt(tax);
+ taxEl.innerText = Math.round(tax);
  let promo = document.getElementById('promoInputId');
  let total = (subPrice + parseInt(tax)) + 5;
- totalEl.innerText =  total;
- window.addEventListener('click', function(event){
-    if(event.target.dataset.action === 'findPromo'){
-        if(promo.value == "747"){
-        totalEl.innerText = total - (parseInt(total*0.30));
-        }else{ totalEl.innerText = total;}
-    }
-});
+ if(subPrice == 0 || currentPrice == 0){
+    totalEl = 0
+ }else{ 
+    totalEl.innerText =  total;
+    window.addEventListener('click', function(event){
+       if(event.target.dataset.action === 'findPromo'){
+           if(promo.value == "747"){
+           totalEl.innerText = total - (parseInt(total*0.30));
+           }else{ totalEl.innerText = total;}
+       }
+   });}
+
 })
 
 }

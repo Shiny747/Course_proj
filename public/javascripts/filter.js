@@ -1,31 +1,28 @@
-const list = document.querySelector('.mainPanelMenu'),
-      items = document.querySelectorAll('.mainPanelCard');
+const list = document.querySelector('.mainPanelMenu');
 
- async function filter(){
     list.addEventListener('click', event => {
-        let targetId = event.target.dataset.f
-        console.log(targetId)
+        let targetId = event.target.dataset.filter
         switch(targetId){
             case 'ALL':
-                break
-            case 'RISOTTO':
-            getItems(targetId);
-                break
+            getItems('mainPanelCard');
+            break;
             case 'SPAGHETTI':
             getItems(targetId);
-            break     
+            break;
+            case 'RISOTTO':
+            getItems(targetId);
+            break;
         }
     })
-}      
+      
 
 function getItems(className){
+    const items = document.querySelectorAll('.mainPanelCard')
     items.forEach(item => {
         if(item.classList.contains(className)){
             item.style.display = 'block'
-            console.log("Error here!");
         } else {
             item.style.display = 'none'
-            console.log("Error here2!");
         }
     })
 }
